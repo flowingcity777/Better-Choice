@@ -82,3 +82,8 @@ button.done {
   color: white;
   border: none;
 }
+
+#emptyMessage {
+  color: var(--muted);
+  margin-top: 20px;
+}
