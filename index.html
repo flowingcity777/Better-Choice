@@ -20,5 +20,24 @@
   <button class="add">+ Add Habit</button>
 
 </div>
+  
+<script>
+function toggleDone(button) {
+  const habit = button.parentElement;
+  const status = habit.querySelector(".status");
 
+  if (button.classList.contains("done")) {
+    button.classList.remove("done");
+    button.textContent = "Done";
+    status.textContent = "Take it one step at a time.";
+    status.classList.remove("done-text");
+  } else {
+    button.classList.add("done");
+    button.textContent = "✓ Done";
+    status.textContent = "You showed up today.";
+    status.classList.add("done-text");
+  }
+}
+</script>
+  
 </body>
