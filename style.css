@@ -52,3 +52,12 @@ button {
   background: var(--soft);
   color: var(--text);
 }
+
+button.done {
+  background: #cfd8cc;
+  color: #2f2a26;
+}
+
+.status.done-text {
+  color: var(--text);
+}
