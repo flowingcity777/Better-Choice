@@ -53,6 +53,27 @@ function toggleDone(button) {
     status.classList.add("done-text");
   }
 }
+  
+  const input = document.getElementById("habitInput");
+  const value = input.value.trim();
+
+  if (!value) return;
+
+  const habitList = document.getElementById("habitList");
+
+  const habit = document.createElement("div");
+  habit.className = "habit";
+
+  habit.innerHTML = `
+    <h3>${value}</h3>
+    <p class="status">Take it one step at a time.</p>
+    <button onclick="toggleDone(this)">Done</button>
+  `;
+
+  habitList.appendChild(habit);
+
+  input.value = "";
+}
 </script>
   
 </body>
