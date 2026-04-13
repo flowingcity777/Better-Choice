@@ -55,7 +55,8 @@ function toggleDone(button) {
     status.classList.add("done-text");
   }
 }
-  
+
+function addHabit() {
   const input = document.getElementById("habitInput");
   const value = input.value.trim();
 
@@ -74,12 +75,18 @@ function toggleDone(button) {
   `;
 
   habitList.appendChild(habit);
-
-  // ✅ hide empty message
   emptyMessage.style.display = "none";
-
   input.value = "";
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+  const emptyMessage = document.getElementById("emptyMessage");
+  const starterHabits = document.querySelectorAll(".habit");
+
+  if (starterHabits.length > 0) {
+    emptyMessage.style.display = "none";
+  }
+});
 </script>
   
 </body>
