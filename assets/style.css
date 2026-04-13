@@ -61,3 +61,24 @@ button.done {
 .status.done-text {
   color: var(--text);
 }
+
+.add-section {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.add-section input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 999px;
+  border: 1px solid var(--soft);
+}
+
+.add-section button {
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: white;
+  border: none;
+}
