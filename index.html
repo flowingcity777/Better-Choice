@@ -62,6 +62,7 @@ function toggleDone(button) {
   if (!value) return;
 
   const habitList = document.getElementById("habitList");
+  const emptyMessage = document.getElementById("emptyMessage");
 
   const habit = document.createElement("div");
   habit.className = "habit";
@@ -73,6 +74,9 @@ function toggleDone(button) {
   `;
 
   habitList.appendChild(habit);
+
+  // ✅ hide empty message
+  emptyMessage.style.display = "none";
 
   input.value = "";
 }
